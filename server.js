@@ -28,17 +28,17 @@ app.post('/app/roll/', (req, res) => {
 });
 
 app.get('/app/roll/:sides/', (req, res) => {
-	res.send(req.params.sides, 2, 1);
+	res.send(roll(parseInt(req.params.sides), 2, 1));
 	res.status(200);
 });
 
 app.get('/app/roll/:sides/:dice/', (req, res) => {
-	res.send(req.params.sides, req.params.dice, 1);
+	res.send(roll(parseInt(req.params.sides), parseInt(req.params.dice), 1));
 	res.status(200);
-});
+}
 
 app.get('/app/roll/:sides/:dice/:rolls?', (req, res) => {
-	res.send(req.params.sides, req.params.dice, req.params.rolls);
+	res.send(roll(parseInt(req.params.sides), parseInt(req.params.dice), parseInt(req.params.rolls)));
 	res.status(200);
 });
 
