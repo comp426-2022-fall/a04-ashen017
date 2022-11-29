@@ -14,7 +14,7 @@ if(args.port){
 
 app.get('/app/', (req, res) => {
 	res.status(200);
-	res.send('200 OK'));
+	res.send('200 OK');
 });
 
 app.get('/app/roll/', (req, res) => {
