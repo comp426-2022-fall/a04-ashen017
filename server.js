@@ -18,8 +18,8 @@ app.get('/app/', (req, res) => {
 });
 
 app.get('/app/roll/', (req, res) => {
-	res.status(200);
 	res.send(roll(6,2,1));
+	res.status(200);
 });
 
 app.post('/app/roll/', (req, res) => {
